@@ -1,0 +1,123 @@
+:root {
+  --cream: #fbf1df;
+  --ink: #17130f;
+  --muted: #655b4f;
+  --line: #d9c8ad;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  min-height: 100%;
+  background: var(--cream);
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  background: var(--cream);
+  color: var(--ink);
+  font-family: Georgia, "Iowan Old Style", "Palatino Linotype", Palatino, serif;
+}
+
+a {
+  color: inherit;
+  text-decoration-thickness: 0.08em;
+  text-underline-offset: 0.18em;
+}
+
+.home {
+  display: grid;
+  grid-template-rows: 1fr auto;
+}
+
+.home-main {
+  display: grid;
+  min-height: calc(100vh - 4.75rem);
+  place-items: center;
+  padding: 1rem;
+}
+
+.home-main h1 {
+  margin: 0;
+  font-size: clamp(5.3rem, 18vw, 19rem);
+  font-weight: 700;
+  line-height: 0.82;
+  letter-spacing: 0;
+  text-align: center;
+}
+
+.home-links {
+  display: flex;
+  justify-content: center;
+  gap: clamp(1.1rem, 4vw, 2.5rem);
+  padding: 0 1rem 2rem;
+  color: var(--muted);
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 0.9rem;
+}
+
+.policy-page {
+  padding: clamp(1.25rem, 4vw, 3rem);
+}
+
+.policy-header {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: clamp(2.5rem, 8vw, 6rem);
+}
+
+.wordmark {
+  font-size: clamp(2.2rem, 7vw, 5.75rem);
+  font-weight: 700;
+  line-height: 0.9;
+  text-decoration: none;
+}
+
+.policy {
+  width: min(44rem, 100%);
+  margin: 0 auto 5rem;
+}
+
+.policy h1 {
+  margin: 0 0 0.35em;
+  font-size: clamp(2.8rem, 8vw, 5.5rem);
+  line-height: 0.95;
+  letter-spacing: 0;
+}
+
+.effective {
+  margin: 0 0 2.25rem;
+  color: var(--muted);
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: clamp(1rem, 2vw, 1.15rem);
+}
+
+.policy h2 {
+  margin: 2rem 0 0.45rem;
+  padding-top: 1.2rem;
+  border-top: 1px solid var(--line);
+  font-size: clamp(1.5rem, 4vw, 2rem);
+  line-height: 1.05;
+  letter-spacing: 0;
+}
+
+.policy p {
+  margin: 0 0 1rem;
+  font-size: clamp(1.2rem, 2.5vw, 1.55rem);
+  line-height: 1.42;
+}
+
+@media (max-width: 520px) {
+  .home-links {
+    align-items: center;
+    flex-direction: column;
+    gap: 0.55rem;
+  }
+
+  .policy-header {
+    justify-content: flex-start;
+  }
+}
